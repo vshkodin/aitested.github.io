@@ -1,29 +1,50 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+-->
 <html>
-<head>
-    <title>AITested - Coming Soon</title>
-    <style>
-        body {
-            background-color: #e8f0fe; /* Light blue background */
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
+	<head>
+		<title>Aitested</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-        #logo {
-            color: blue;
-            font-size: 36px;
-            margin-top: 50px;
-        }
+<div class="scroll">
+    <div class="refresh">
+        Pull To Refresh 
+    </div>
+    <div class="container">
+        content
+    </div>        
+</div>
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+			<div id="bg"></div>
+			<div id="overlay"></div>
+			<div id="main">
 
-        #roadblock-image {
-            max-width: 500px;
-            margin-top: 50px;
-        }
-    </style>
-</head>
-<body>
-    <h1 id="logo">AITested</h1>
-    <img id="roadblock-image" src="roadblock.png" alt="Roadblock">
-    <p>Coming Soon</p>
-</body>
+				<!-- Header -->
+					<header id="header">
+						<h1>Aitested</h1>
+						<p>Still cooking &nbsp;&bull;&nbsp; Awesome things &nbsp;&bull;&nbsp; Coming soon</p>
+						<nav>
+
+						</nav>
+					</header>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<span class="copyright">&copy; Aitested.io</span>
+					</footer>
+
+			</div>
+		</div>
+		<script>
+			window.onload = function() { document.body.classList.remove('is-preload'); }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+		</script>
+	</body>
 </html>
