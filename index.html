@@ -9,18 +9,43 @@
 </head>
 <body class="bg-gray-50 font-sans leading-relaxed tracking-wide flex flex-col">
     <!-- Header -->
-    <header class="bg-white py-6 shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="text-3xl font-bold text-blue-600">AITested</div>
-            <nav class="space-x-6 text-lg">
+    <header class="bg-white py-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center px-4 md:px-0">
+            <div class="text-2xl md:text-3xl font-bold text-blue-600">AITested</div>
+            <!-- Hamburger Icon for mobile -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="focus:outline-none">
+                    <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+            <!-- Navigation Menu -->
+            <nav id="menu" class="hidden md:flex space-x-4 text-lg">
                 <a href="#" class="hover:text-blue-600">About Us</a>
                 <a href="#" class="hover:text-blue-600">Price</a>
                 <a href="#" class="hover:text-blue-600">Our Services</a>
                 <a href="#" class="hover:text-blue-600">Contact Us</a>
             </nav>
-            <button class="px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-500">Sign Up</button>
+            <button class="hidden md:block px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-500">Sign Up</button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white px-4 py-2 space-y-2">
+            <a href="#" class="block hover:text-blue-600">About Us</a>
+            <a href="#" class="block hover:text-blue-600">Price</a>
+            <a href="#" class="block hover:text-blue-600">Our Services</a>
+            <a href="#" class="block hover:text-blue-600">Contact Us</a>
+            <button class="w-full px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-500">Sign Up</button>
         </div>
     </header>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
 
     <!-- Hero Section -->
     <section class="bg-gradient-to-r from-blue-50 to-purple-100 py-20">
