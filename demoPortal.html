@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AITested Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Sidebar -->
+    <div class="flex">
+        <aside class="bg-white w-64 h-screen shadow-md">
+            <div class="p-6">
+                <div class="text-3xl font-bold text-blue-600 mb-6">AITested</div>
+                <nav class="space-y-4">
+                    <a href="#" class="block text-blue-600 font-semibold">Dashboard</a>
+                    <a href="#" class="block text-gray-600">Test Runs</a>
+                    <a href="#" class="block text-gray-600">Test Case</a>
+                    <a href="#" class="block text-gray-600">Chat</a>
+                    <a href="#" class="block text-gray-600">Reports</a>
+                    <a href="#" class="block text-gray-600">Settings</a>
+                </nav>
+                <div class="mt-10 bg-blue-50 p-4 rounded-lg text-center">
+                    <p>Do you want to do more than 50 tests?</p>
+                    <button class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-500">See tariffs</button>
+                </div>
+                <div class="mt-8 text-blue-600 text-center">
+                    <a href="#">Log out</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main content -->
+        <main class="flex-1 p-6">
+            <!-- Top bar -->
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-2xl font-semibold text-gray-800">Dashboard 1</h1>
+                <div class="flex space-x-4 items-center">
+                    <button class="px-4 py-2 bg-green-100 text-green-600 rounded-full">Public</button>
+                    <input type="text" placeholder="Search" class="px-4 py-2 border rounded-md">
+                    <img src="https://placehold.co/40" alt="User Profile" class="w-10 h-10 rounded-full">
+                </div>
+            </div>
+
+            <!-- Statistics Summary -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <p class="text-gray-600">Test cycles in progress</p>
+                    <h2 class="text-3xl font-bold text-gray-800">154</h2>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <p class="text-gray-600">Test case executed</p>
+                    <h2 class="text-3xl font-bold text-gray-800">34</h2>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <p class="text-gray-600">Total test cases</p>
+                    <h2 class="text-3xl font-bold text-gray-800">2,089</h2>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <p class="text-gray-600">Total test plans created</p>
+                    <h2 class="text-3xl font-bold text-gray-800">56,089</h2>
+                </div>
+            </div>
+
+            <!-- Jira Bugs and Automation Runs -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-lg font-semibold mb-4">Jira Bugs by Team Member</h3>
+                    <!-- Table for Jira Bugs by Team Member -->
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full">
+                            <thead>
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Bug</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Priority</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Member</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Bug 1 name</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600">In Progress</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-red-600">High</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">08/07/2024</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm"><img src="https://placehold.co/30" class="w-8 h-8 rounded-full" alt="Member"></td>
+                                </tr>
+                                <!-- Repeat similar rows as needed -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="text-right mt-4">
+                        <a href="#" class="text-blue-600 hover:underline">See all</a>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-lg font-semibold mb-4">Jira Bugs by Team</h3>
+                    <!-- Similar structure for Jira Bugs by Team -->
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full">
+                            <thead>
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Bug</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Priority</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Team</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Bug 1 name</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600">In Progress</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-red-600">High</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">08/07/2024</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm">Team A</td>
+                                </tr>
+                                <!-- Repeat similar rows as needed -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="text-right mt-4">
+                        <a href="#" class="text-blue-600 hover:underline">See all</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Automation Runs -->
+            <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                <h3 class="text-lg font-semibold mb-4">Automation Runs</h3>
+                <!-- Table for Automation Runs -->
+                <div class="overflow-x-auto">
+                    <table class="min-w-full">
+                        <thead>
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Assignee</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type of Testing</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Priority</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Labels</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600"><a href="#">SSO Integration</a></td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">J001</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">08/08/2024</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Team</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Manual</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-red-600">High</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600">In Progress</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Regression Testing</td>
+                            </tr>
+                            <!-- Repeat similar rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="text-right mt-4">
+                    <a href="#" class="text-blue-600 hover:underline">See all</a>
+                </div>
+            </div>
+
+            <!-- Test Cycles Active -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold mb-4">Test Cycles Active</h3>
+                <img src="https://placehold.co/800x300" alt="Chart">
+            </div>
+        </main>
+    </div>
+</body>
+</html>
